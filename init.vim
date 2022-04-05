@@ -15,20 +15,17 @@ set cc=80                  " set an 80 column border for good coding style
 filetype plugin indent on   "allow auto-indenting depending on file type
 syntax on                   " syntax highlighting
 set mouse=a                 " enable mouse click
-set clipboard=unnamedplus   " using system clipboard
 filetype plugin on
 set cursorline              " highlight current cursorline
-set ttyfast                 " Speed up scrolling in Vim
-" set spell                 " enable spell check (may need to download language package)
-set noswapfile            " disable creating swap file
-" set backupdir=~/.cache/vim " Directory to store backup files
+set noswapfile           
+set nobackup
+set clipboard=unnamedplus
+
 
 call plug#begin()
 " Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
  Plug 'dracula/vim'
  Plug 'ryanoasis/vim-devicons'
- Plug 'scrooloose/nerdtree'
- Plug 'preservim/nerdcommenter'
  Plug 'mhinz/vim-startify'
  Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
@@ -42,6 +39,8 @@ syntax enable
 colorscheme dracula" open new split panes to right and below
 set splitright
 set splitbelow
+
+let g:pymode_doc_bind = 'K'
 
 " run current script with python3 by CTRL+R in command and insert mode
 autocmd FileType python map <buffer> <C-r> :w<CR>:exec '!python3' shellescape(@%, 1)<CR>
