@@ -28,6 +28,7 @@ call plug#begin()
  Plug 'ryanoasis/vim-devicons'
  Plug 'mhinz/vim-startify'
  Plug 'neoclide/coc.nvim', {'branch': 'release'}
+ Plug 'tpope/vim-commentary'
 call plug#end()
 
 " color schemes
