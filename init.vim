@@ -26,6 +26,7 @@ Plug 'tpope/vim-commentary'
 Plug 'scrooloose/nerdtree'
 "vim-airline
 Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 "FZF
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
@@ -35,6 +36,12 @@ Plug 'tpope/vim-surround'
 Plug 'terryma/vim-multiple-cursors'
 call plug#end()
 """"""""""""""""""""""""""""""""""""""
-"""""""""""""""THEMES""""""""""""""""
+"""""""""""""""THEMES"""""""""""""""""
 colorscheme dracula
 """"""""""""""""""""""""""""""""""""""
+""""""""""""""Air-line""""""""""""""""
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
